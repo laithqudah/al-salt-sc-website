@@ -9,7 +9,7 @@
       content="موقع تعريفي احترافي لنادي السلط الرياضي، يعرض معلومات النادي، التاريخ، الإنجازات، الأخبار، وروابط التواصل."
     />
     <link rel="icon" href="assets/al-salt-logo-transparent.png" type="image/png" />
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=4" />
   </head>
   <body>
     <header class="topbar" data-header>
@@ -197,30 +197,139 @@
       <section class="section squad" id="squad">
         <div class="section-heading">
           <p class="eyebrow">الفريق الأول</p>
-          <h2>قائمة الفريق تحتاج اعتماداً رسمياً قبل النشر.</h2>
+          <h2>مركز الفريق: قائمة حالية + أرشيف موثق.</h2>
           <p>
-            تم إزالة قائمة اللاعبين السابقة لأنها لا تمثل التسجيل الحالي للفريق.
-            في النسخة الرسمية، يجب إدخال الأسماء من كشف النادي أو الاتحاد الأردني
-            فقط، ثم إضافة الصور، الأرقام، المراكز، والجنسية لكل لاعب.
+            لم تظهر قائمة تسجيل رسمية حديثة يمكن اعتمادها بثقة من الإنترنت. لذلك يعرض الموقع
+            منطقة جاهزة للقائمة الحالية، ومعها أرشيف قائمة آسيوية موثقة من أخبار 2021
+            حتى يكون القسم مفيداً دون الادعاء بأنه يمثل الموسم الحالي.
           </p>
         </div>
 
-        <div class="squad-status">
-          <article>
-            <span>01</span>
-            <h3>كشف اللاعبين الرسمي</h3>
-            <p>يدخل من إدارة النادي أو كشف التسجيل المعتمد قبل بداية الموسم.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>بيانات كل لاعب</h3>
-            <p>الاسم، الرقم، المركز، الجنسية، تاريخ الميلاد، الصورة، والحالة.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>تحديث موسمي</h3>
-            <p>نظام بسيط يميز بين القائمة الحالية، اللاعبين المغادرين، ولاعبي الأكاديمية.</p>
-          </article>
+        <div class="squad-tabs" role="tablist" aria-label="عرض قوائم الفريق">
+          <button class="is-active" type="button" data-squad-view="current">القائمة الحالية</button>
+          <button type="button" data-squad-view="archive">أرشيف آسيوي موثق</button>
+        </div>
+
+        <div class="squad-panel is-active" data-squad-panel="current">
+          <div class="squad-status">
+            <article>
+              <span>01</span>
+              <h3>بانتظار كشف التسجيل</h3>
+              <p>يضاف هنا كشف اللاعبين الحالي من النادي أو الاتحاد الأردني عند توفره.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>جاهز للصور والأرقام</h3>
+              <p>النظام مجهز لعرض الرقم، المركز، الجنسية، الصورة، وحالة اللاعب.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>بدون معلومات غير مؤكدة</h3>
+              <p>لا يتم نشر أسماء على أنها حالية إلا بعد وجود مصدر رسمي واضح.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="squad-panel" data-squad-panel="archive">
+          <div class="squad-toolbar" aria-label="أدوات تصفية قائمة اللاعبين">
+            <label>
+              <span>ابحث في الأرشيف</span>
+              <input type="search" data-player-search placeholder="اكتب الاسم..." />
+            </label>
+            <div class="filter-buttons" role="group" aria-label="تصفية حسب المركز">
+              <button class="is-active" type="button" data-filter="all">الكل</button>
+              <button type="button" data-filter="goalkeeper">حراس المرمى</button>
+              <button type="button" data-filter="defender">الدفاع</button>
+              <button type="button" data-filter="midfielder">الوسط</button>
+              <button type="button" data-filter="forward">الهجوم</button>
+            </div>
+          </div>
+
+          <div class="squad-summary">
+            <strong data-visible-count>26</strong>
+            <span>لاعباً في القائمة الآسيوية المنشورة عام 2021</span>
+          </div>
+
+          <div class="squad-grid" data-squad-grid>
+            <article class="player-card" data-position="goalkeeper" data-name="معتز ياسين moataz yaseen">
+              <span class="shirt">GK</span><h3>معتز ياسين</h3><p>حارس مرمى · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="goalkeeper" data-name="أنس الخلايلة anas al khalaileh">
+              <span class="shirt">GK</span><h3>أنس الخلايلة</h3><p>حارس مرمى · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="goalkeeper" data-name="سيف أبو هزيم saif abu hazeem">
+              <span class="shirt">GK</span><h3>سيف أبو هزيم</h3><p>حارس مرمى · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="defender" data-name="محمد وتارا mohammad watara">
+              <span class="shirt">DF</span><h3>محمد وتارا</h3><p>دفاع · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="defender" data-name="محمد مصطفى mohammad mustafa">
+              <span class="shirt">DF</span><h3>محمد مصطفى</h3><p>دفاع · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="defender" data-name="رواد أبو خيزران rawad abu khizaran">
+              <span class="shirt">DF</span><h3>رواد أبو خيزران</h3><p>دفاع · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="defender" data-name="أدهم القرشي adham al quraishi">
+              <span class="shirt">DF</span><h3>أدهم القرشي</h3><p>دفاع · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="defender" data-name="محمد أبو حشيش mohammad abu hashish">
+              <span class="shirt">DF</span><h3>محمد أبو حشيش</h3><p>دفاع · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="defender" data-name="خالد أبو عاقولة khaled abu aqouleh">
+              <span class="shirt">DF</span><h3>خالد أبو عاقولة</h3><p>دفاع · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="defender" data-name="محمد الديات mohammad al dayat">
+              <span class="shirt">DF</span><h3>محمد الديات</h3><p>دفاع · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="defender" data-name="محمد كلوب mohammad kalloub">
+              <span class="shirt">DF</span><h3>محمد كلوب</h3><p>دفاع · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="midfielder" data-name="محمد راتب الداوود mohammad al dawood">
+              <span class="shirt">MF</span><h3>محمد راتب الداوود</h3><p>وسط · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="midfielder" data-name="عبيدة السمارنة obaida al samarneh">
+              <span class="shirt">MF</span><h3>عبيدة السمارنة</h3><p>وسط · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="midfielder" data-name="حمزة مرضي hamza mardi">
+              <span class="shirt">MF</span><h3>حمزة مرضي</h3><p>وسط · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="midfielder" data-name="محمد المشة mohammad masheh">
+              <span class="shirt">MF</span><h3>محمد المشة</h3><p>وسط · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="midfielder" data-name="أحمد سريوة ahmad sariweh">
+              <span class="shirt">MF</span><h3>أحمد سريوة</h3><p>وسط · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="midfielder" data-name="بلال الخفيفي bilal khafifi">
+              <span class="shirt">MF</span><h3>بلال الخفيفي</h3><p>وسط · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="midfielder" data-name="محمود مرضي mahmoud mardi">
+              <span class="shirt">MF</span><h3>محمود مرضي</h3><p>وسط · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="midfielder" data-name="غيث مهيرات ghaith mhairat">
+              <span class="shirt">MF</span><h3>غيث مهيرات</h3><p>وسط · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="midfielder" data-name="إبراهيم سلام ibrahim salam">
+              <span class="shirt">MF</span><h3>إبراهيم سلام</h3><p>وسط · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="midfielder" data-name="عبدالله ذيب abdallah deeb">
+              <span class="shirt">MF</span><h3>عبدالله ذيب</h3><p>وسط · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="midfielder" data-name="محمد الرازم mohammad al razem">
+              <span class="shirt">MF</span><h3>محمد الرازم</h3><p>وسط · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="midfielder" data-name="زيد أبو عابد zaid abu abed">
+              <span class="shirt">MF</span><h3>زيد أبو عابد</h3><p>وسط · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="midfielder" data-name="مقداد الطموني miqdad altamouni">
+              <span class="shirt">MF</span><h3>مقداد الطموني</h3><p>وسط · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="forward" data-name="رونالد وانجا ronald wanga">
+              <span class="shirt">FW</span><h3>رونالد وانجا</h3><p>هجوم · أرشيف 2021</p>
+            </article>
+            <article class="player-card" data-position="forward" data-name="عبدالله ضبابات abdallah dababat">
+              <span class="shirt">FW</span><h3>عبدالله ضبابات</h3><p>هجوم · أرشيف 2021</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -237,12 +346,12 @@
         <div class="store-layout">
           <div class="product-grid">
             <article class="product-card" data-product-card data-product="Home Jersey" data-price="0">
-              <div class="jersey-preview home-kit" aria-hidden="true">
-                <img src="assets/al-salt-logo-transparent.png" alt="" />
+              <div class="jersey-photo">
+                <img src="assets/al-salt-home-kit-2024-25.jpg" alt="قميص نادي السلط الأساسي 2024-25" />
               </div>
-              <span class="product-kicker">القميص الأساسي</span>
-              <h3>Al-Salt Home Jersey</h3>
-              <p>تصميم أزرق داكن مع تفاصيل صفراء مستوحاة من شعار النادي.</p>
+              <span class="product-kicker">قميص موثق</span>
+              <h3>Home Jersey 2024-25</h3>
+              <p>صورة قميص منشورة في Football Kit Archive، مع طلب مبدئي للتواصل فقط.</p>
               <label>
                 <span>المقاس</span>
                 <select data-size>
@@ -257,12 +366,12 @@
             </article>
 
             <article class="product-card" data-product-card data-product="Away Jersey" data-price="0">
-              <div class="jersey-preview away-kit" aria-hidden="true">
-                <img src="assets/al-salt-logo-transparent.png" alt="" />
+              <div class="jersey-photo">
+                <img src="assets/al-salt-home-kit-2023-24.jpg" alt="قميص نادي السلط 2023-24" />
               </div>
-              <span class="product-kicker">قميص خارجي</span>
-              <h3>Al-Salt Away Jersey</h3>
-              <p>نسخة بيضاء نظيفة مع شريط أزرق مناسب للمتجر الرسمي والرعاة.</p>
+              <span class="product-kicker">قميص سابق</span>
+              <h3>Home Jersey 2023-24</h3>
+              <p>نسخة أرشيفية يمكن عرضها كمنتج قديم أو مرجع بصري لتصميم المتجر.</p>
               <label>
                 <span>المقاس</span>
                 <select data-size>
@@ -404,9 +513,11 @@
           <h2>المعلومات المستخدمة في هذه النسخة.</h2>
         </div>
         <ul>
-          <li>تم إزالة قائمة اللاعبين السابقة لأن المستخدم أكد أنها لا تمثل القائمة الحالية.</li>
+          <li>تمت إزالة القائمة التي لا تمثل الموسم الحالي، واستبدالها بمنطقة قائمة حالية تنتظر الكشف الرسمي.</li>
+          <li>أرشيف اللاعبين المعروض مبني على قائمة عامة منشورة لمشاركة السلط في كأس الاتحاد الآسيوي 2021.</li>
+          <li>صور القمصان المستخدمة مأخوذة من Football Kit Archive كمرجع بصري عام للقمصان المنشورة.</li>
           <li>تمت مراجعة مصادر نتائج عامة مثل Petra وYalla Shoot و365Scores للأخبار والنتائج القريبة.</li>
-          <li>قائمة اللاعبين والمباريات والمنتجات قابلة للتغير، ويجب اعتمادها نهائياً من النادي قبل النشر الرسمي.</li>
+          <li>القائمة الحالية والمباريات والمنتجات يجب اعتمادها نهائياً من النادي قبل النشر الرسمي.</li>
           <li>أي نشر رسمي يجب أن يراجع الأسماء، الشعارات، الجداول، والرعاة مع إدارة نادي السلط.</li>
           <li>تم استخدام شعار متاح للعامة لأغراض العرض، ويجب الحصول على موافقة النادي قبل النشر الرسمي.</li>
         </ul>
@@ -437,6 +548,6 @@
       <a href="#home">العودة للأعلى</a>
     </footer>
 
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=4"></script>
   </body>
 </html>

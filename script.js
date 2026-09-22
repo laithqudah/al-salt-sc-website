@@ -4,6 +4,9 @@ const header = document.querySelector("[data-header]");
 const playerSearch = document.querySelector("[data-player-search]");
 const playerCards = [...document.querySelectorAll(".player-card")];
 const filterButtons = [...document.querySelectorAll("[data-filter]")];
+const squadViewButtons = [...document.querySelectorAll("[data-squad-view]")];
+const squadPanels = [...document.querySelectorAll("[data-squad-panel]")];
+const visibleCount = document.querySelector("[data-visible-count]");
 const fixtureRefresh = document.querySelector("[data-fixture-refresh]");
 const fixtureList = document.querySelector("[data-fixture-list]");
 const productCards = [...document.querySelectorAll("[data-product-card]")];
@@ -46,6 +49,7 @@ const normalizeText = (value) =>
 
 const updatePlayerCards = () => {
   const query = normalizeText(playerSearch?.value || "");
+  let count = 0;
 
   playerCards.forEach((card) => {
     const cardPosition = card.dataset.position || "";
@@ -53,8 +57,12 @@ const updatePlayerCards = () => {
     const matchesPosition = activePosition === "all" || cardPosition === activePosition;
     const matchesSearch = !query || cardName.includes(query);
 
-    card.hidden = !(matchesPosition && matchesSearch);
+    const visible = matchesPosition && matchesSearch;
+    card.hidden = !visible;
+    if (visible) count += 1;
   });
+
+  if (visibleCount) visibleCount.textContent = String(count);
 };
 
 if (playerSearch && playerCards.length) {
@@ -66,6 +74,17 @@ if (filterButtons.length) {
     button.addEventListener("click", () => {
       activePosition = button.dataset.filter || "all";
       filterButtons.forEach((item) => item.classList.toggle("is-active", item === button));
+      updatePlayerCards();
+    });
+  });
+}
+
+if (squadViewButtons.length) {
+  squadViewButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const view = button.dataset.squadView;
+      squadViewButtons.forEach((item) => item.classList.toggle("is-active", item === button));
+      squadPanels.forEach((panel) => panel.classList.toggle("is-active", panel.dataset.squadPanel === view));
       updatePlayerCards();
     });
   });
