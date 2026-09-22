@@ -9,7 +9,7 @@
       content="موقع تعريفي احترافي لنادي السلط الرياضي، يعرض معلومات النادي، التاريخ، الإنجازات، الأخبار، وروابط التواصل."
     />
     <link rel="icon" href="assets/al-salt-logo-transparent.png" type="image/png" />
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="styles.css?v=3" />
   </head>
   <body>
     <header class="topbar" data-header>
@@ -31,6 +31,7 @@
         <a href="#honours">الإنجازات</a>
         <a href="#squad">الفريق الأول</a>
         <a href="#matchday">المباريات</a>
+        <a href="#store">المتجر</a>
         <a href="#media">المركز الإعلامي</a>
         <a class="nav-cta" href="#contact">تواصل معنا</a>
       </nav>
@@ -196,128 +197,118 @@
       <section class="section squad" id="squad">
         <div class="section-heading">
           <p class="eyebrow">الفريق الأول</p>
-          <h2>قائمة لاعبين قابلة للبحث والتصفية.</h2>
+          <h2>قائمة الفريق تحتاج اعتماداً رسمياً قبل النشر.</h2>
           <p>
-            هذه القائمة مبنية على بيانات عامة منشورة لموسمي 2025-26 و2026-27.
-            قبل اعتماد الموقع رسمياً، يجب مطابقة الأسماء والأرقام مع كشوفات النادي والاتحاد.
+            تم إزالة قائمة اللاعبين السابقة لأنها لا تمثل التسجيل الحالي للفريق.
+            في النسخة الرسمية، يجب إدخال الأسماء من كشف النادي أو الاتحاد الأردني
+            فقط، ثم إضافة الصور، الأرقام، المراكز، والجنسية لكل لاعب.
           </p>
         </div>
 
-        <div class="squad-toolbar" aria-label="أدوات تصفية قائمة اللاعبين">
-          <label>
-            <span>ابحث عن لاعب</span>
-            <input type="search" data-player-search placeholder="اكتب الاسم..." />
-          </label>
-          <div class="filter-buttons" role="group" aria-label="تصفية حسب المركز">
-            <button class="is-active" type="button" data-filter="all">الكل</button>
-            <button type="button" data-filter="goalkeeper">حراس المرمى</button>
-            <button type="button" data-filter="defender">الدفاع</button>
-            <button type="button" data-filter="midfielder">الوسط</button>
-            <button type="button" data-filter="forward">الهجوم</button>
-          </div>
+        <div class="squad-status">
+          <article>
+            <span>01</span>
+            <h3>كشف اللاعبين الرسمي</h3>
+            <p>يدخل من إدارة النادي أو كشف التسجيل المعتمد قبل بداية الموسم.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>بيانات كل لاعب</h3>
+            <p>الاسم، الرقم، المركز، الجنسية، تاريخ الميلاد، الصورة، والحالة.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>تحديث موسمي</h3>
+            <p>نظام بسيط يميز بين القائمة الحالية، اللاعبين المغادرين، ولاعبي الأكاديمية.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section store" id="store">
+        <div class="section-heading">
+          <p class="eyebrow">متجر النادي</p>
+          <h2>قمصان نادي السلط بتجربة طلب احترافية.</h2>
+          <p>
+            هذا القسم يحول الموقع من صفحة تعريفية فقط إلى منصة تجارية قابلة للتطوير.
+            الطلب هنا مبدئي، ويمكن ربطه لاحقاً ببوابة دفع، مخزون، وتوصيل داخل الأردن.
+          </p>
         </div>
 
-        <div class="squad-grid" data-squad-grid>
-          <article class="player-card" data-position="goalkeeper" data-name="saif abu hazeem سيف أبو هزيم">
-            <span class="shirt">22</span>
-            <h3>Saif Abu Hazeem</h3>
-            <p>حارس مرمى · الأردن</p>
-          </article>
-          <article class="player-card" data-position="goalkeeper" data-name="anas al khalaileh أنس الخلايلة">
-            <span class="shirt">GK</span>
-            <h3>Anas Al-Khalaileh</h3>
-            <p>حارس مرمى · الأردن</p>
-          </article>
-          <article class="player-card" data-position="goalkeeper" data-name="moataz yaseen معتز ياسين">
-            <span class="shirt">GK</span>
-            <h3>Moataz Yaseen</h3>
-            <p>حارس مرمى · الأردن</p>
-          </article>
-          <article class="player-card" data-position="defender" data-name="rawad abu khizaran رواد أبو خيزران">
-            <span class="shirt">CB</span>
-            <h3>Rawad Abu Khizaran</h3>
-            <p>مدافع · الأردن</p>
-          </article>
-          <article class="player-card" data-position="defender" data-name="abdallah almanasrah عبدالله المناصرة">
-            <span class="shirt">DF</span>
-            <h3>Abdallah Almanasrah</h3>
-            <p>مدافع · الأردن</p>
-          </article>
-          <article class="player-card" data-position="defender" data-name="khalid al awaqleh خالد أبو عاقولة">
-            <span class="shirt">DF</span>
-            <h3>Khalid Al-Awaqleh</h3>
-            <p>مدافع · الأردن</p>
-          </article>
-          <article class="player-card" data-position="defender" data-name="mohammad ali محمد علي">
-            <span class="shirt">CB</span>
-            <h3>Mohammad Ali</h3>
-            <p>مدافع · الأردن</p>
-          </article>
-          <article class="player-card" data-position="midfielder" data-name="mohammad alrazem محمد الرزم">
-            <span class="shirt">23</span>
-            <h3>Mohammad Al-Razem</h3>
-            <p>وسط · الأردن</p>
-          </article>
-          <article class="player-card" data-position="midfielder" data-name="ghaith al mhairat غيث مهيرات">
-            <span class="shirt">19</span>
-            <h3>Ghaith Al-Mhairat</h3>
-            <p>وسط · الأردن</p>
-          </article>
-          <article class="player-card" data-position="midfielder" data-name="ameed sawafta عميد صوافطة">
-            <span class="shirt">CM</span>
-            <h3>Ameed Sawafta</h3>
-            <p>وسط · فلسطين</p>
-          </article>
-          <article class="player-card" data-position="midfielder" data-name="hamad al balawneh حمد البلوينة">
-            <span class="shirt">6</span>
-            <h3>Hamad Al-Balawneh</h3>
-            <p>وسط · الأردن</p>
-          </article>
-          <article class="player-card" data-position="midfielder" data-name="khader al haj خضر الحاج">
-            <span class="shirt">8</span>
-            <h3>Khader Al-Haj</h3>
-            <p>وسط · الأردن</p>
-          </article>
-          <article class="player-card" data-position="midfielder" data-name="ibrahim al ajarmeh ابراهيم العجارمة">
-            <span class="shirt">CM</span>
-            <h3>Ibrahim Al-Ajarmeh</h3>
-            <p>وسط · الأردن</p>
-          </article>
-          <article class="player-card" data-position="midfielder" data-name="zaid abu abed زيد أبو عابد">
-            <span class="shirt">LS</span>
-            <h3>Zaid Abu-Abed</h3>
-            <p>وسط · الأردن</p>
-          </article>
-          <article class="player-card" data-position="forward" data-name="mohammad masheh محمد مشة">
-            <span class="shirt">FW</span>
-            <h3>Mohammad Masheh</h3>
-            <p>مهاجم · الأردن</p>
-          </article>
-          <article class="player-card" data-position="forward" data-name="abdallah deeb عبدالله ديب">
-            <span class="shirt">LW</span>
-            <h3>Abdallah Deeb</h3>
-            <p>جناح · الأردن</p>
-          </article>
-          <article class="player-card" data-position="forward" data-name="suhaib abu hashhash صهيب أبو حشاش">
-            <span class="shirt">10</span>
-            <h3>Suhaib Abu Hashhash</h3>
-            <p>جناح · الأردن</p>
-          </article>
-          <article class="player-card" data-position="forward" data-name="cheikhna semega شيخنا سيميغا">
-            <span class="shirt">CF</span>
-            <h3>Cheikhna Semega</h3>
-            <p>مهاجم · موريتانيا</p>
-          </article>
-          <article class="player-card" data-position="forward" data-name="kalu onyemaechi كالو">
-            <span class="shirt">9</span>
-            <h3>Kalu Onyemaechi</h3>
-            <p>مهاجم · نيجيريا</p>
-          </article>
-          <article class="player-card" data-position="forward" data-name="khaled al dardour خالد الدردور">
-            <span class="shirt">CF</span>
-            <h3>Khaled Al-Dardour</h3>
-            <p>مهاجم · الأردن</p>
-          </article>
+        <div class="store-layout">
+          <div class="product-grid">
+            <article class="product-card" data-product-card data-product="Home Jersey" data-price="0">
+              <div class="jersey-preview home-kit" aria-hidden="true">
+                <img src="assets/al-salt-logo-transparent.png" alt="" />
+              </div>
+              <span class="product-kicker">القميص الأساسي</span>
+              <h3>Al-Salt Home Jersey</h3>
+              <p>تصميم أزرق داكن مع تفاصيل صفراء مستوحاة من شعار النادي.</p>
+              <label>
+                <span>المقاس</span>
+                <select data-size>
+                  <option>S</option>
+                  <option>M</option>
+                  <option selected>L</option>
+                  <option>XL</option>
+                  <option>XXL</option>
+                </select>
+              </label>
+              <button class="button primary" type="button" data-add-product>أضف للطلب</button>
+            </article>
+
+            <article class="product-card" data-product-card data-product="Away Jersey" data-price="0">
+              <div class="jersey-preview away-kit" aria-hidden="true">
+                <img src="assets/al-salt-logo-transparent.png" alt="" />
+              </div>
+              <span class="product-kicker">قميص خارجي</span>
+              <h3>Al-Salt Away Jersey</h3>
+              <p>نسخة بيضاء نظيفة مع شريط أزرق مناسب للمتجر الرسمي والرعاة.</p>
+              <label>
+                <span>المقاس</span>
+                <select data-size>
+                  <option>S</option>
+                  <option>M</option>
+                  <option selected>L</option>
+                  <option>XL</option>
+                  <option>XXL</option>
+                </select>
+              </label>
+              <button class="button primary" type="button" data-add-product>أضف للطلب</button>
+            </article>
+
+            <article class="product-card" data-product-card data-product="Training Shirt" data-price="0">
+              <div class="jersey-preview training-kit" aria-hidden="true">
+                <img src="assets/al-salt-logo-transparent.png" alt="" />
+              </div>
+              <span class="product-kicker">تدريبات</span>
+              <h3>Training Shirt</h3>
+              <p>قميص يومي للجمهور والتمارين، قابل لإضافة اسم ورقم لاحقاً.</p>
+              <label>
+                <span>المقاس</span>
+                <select data-size>
+                  <option>S</option>
+                  <option>M</option>
+                  <option selected>L</option>
+                  <option>XL</option>
+                  <option>XXL</option>
+                </select>
+              </label>
+              <button class="button primary" type="button" data-add-product>أضف للطلب</button>
+            </article>
+          </div>
+
+          <aside class="cart-panel" aria-label="ملخص طلب القمصان">
+            <span class="product-kicker">طلب مبدئي</span>
+            <h3>سلة القمصان</h3>
+            <div class="cart-items" data-cart-items>
+              <p>اختر قميصاً ومقاساً لإعداد طلب مبدئي.</p>
+            </div>
+            <div class="cart-actions">
+              <a class="button primary" data-cart-mail href="mailto:info@example.com?subject=Al-Salt%20SC%20Jersey%20Order">إرسال الطلب</a>
+              <button class="button secondary dark" type="button" data-clear-cart>مسح السلة</button>
+            </div>
+            <small>يمكن استبدال البريد لاحقاً برابط واتساب أو بوابة دفع رسمية.</small>
+          </aside>
         </div>
       </section>
 
@@ -382,7 +373,11 @@
           </article>
           <article>
             <h3>الفريق الأول</h3>
-            <p>قائمة لاعبين بتصفية حسب المركز، مع قابلية إضافة الصور والأرقام الرسمية.</p>
+            <p>قسم جاهز لإدخال القائمة الرسمية بعد اعتمادها من النادي أو الاتحاد.</p>
+          </article>
+          <article>
+            <h3>متجر النادي</h3>
+            <p>قمصان ومنتجات جماهيرية مع طلب مبدئي قابل للربط بالدفع والتوصيل.</p>
           </article>
           <article>
             <h3>أكاديمية النادي</h3>
@@ -409,9 +404,9 @@
           <h2>المعلومات المستخدمة في هذه النسخة.</h2>
         </div>
         <ul>
-          <li>تم الاعتماد على معلومات عامة من Transfermarkt لقائمة الفريق، حجم القائمة، متوسط العمر، والقيمة السوقية.</li>
+          <li>تم إزالة قائمة اللاعبين السابقة لأن المستخدم أكد أنها لا تمثل القائمة الحالية.</li>
           <li>تمت مراجعة مصادر نتائج عامة مثل Petra وYalla Shoot و365Scores للأخبار والنتائج القريبة.</li>
-          <li>قائمة اللاعبين والمباريات قابلة للتغير، ويجب اعتمادها نهائياً من النادي أو الاتحاد الأردني قبل النشر الرسمي.</li>
+          <li>قائمة اللاعبين والمباريات والمنتجات قابلة للتغير، ويجب اعتمادها نهائياً من النادي قبل النشر الرسمي.</li>
           <li>أي نشر رسمي يجب أن يراجع الأسماء، الشعارات، الجداول، والرعاة مع إدارة نادي السلط.</li>
           <li>تم استخدام شعار متاح للعامة لأغراض العرض، ويجب الحصول على موافقة النادي قبل النشر الرسمي.</li>
         </ul>
@@ -430,7 +425,7 @@
           <strong>اقتراح تطوعي</strong>
           <p>
             بناء موقع رسمي بسيط للنادي يشمل الأخبار، المباريات، الفريق، الإنجازات،
-            الرعاة، وصفحة تواصل واضحة.
+            متجر القمصان، الرعاة، وصفحة تواصل واضحة.
           </p>
           <a class="button primary" href="mailto:info@example.com?subject=Al-Salt%20SC%20Website%20Proposal">إرسال الاقتراح</a>
         </div>
@@ -442,6 +437,6 @@
       <a href="#home">العودة للأعلى</a>
     </footer>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
   </body>
 </html>

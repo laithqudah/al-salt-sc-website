@@ -6,8 +6,13 @@ const playerCards = [...document.querySelectorAll(".player-card")];
 const filterButtons = [...document.querySelectorAll("[data-filter]")];
 const fixtureRefresh = document.querySelector("[data-fixture-refresh]");
 const fixtureList = document.querySelector("[data-fixture-list]");
+const productCards = [...document.querySelectorAll("[data-product-card]")];
+const cartItems = document.querySelector("[data-cart-items]");
+const cartMail = document.querySelector("[data-cart-mail]");
+const clearCart = document.querySelector("[data-clear-cart]");
 
 let activePosition = "all";
+const cart = [];
 
 if (menuButton && siteNav) {
   menuButton.addEventListener("click", () => {
@@ -73,3 +78,49 @@ if (fixtureRefresh && fixtureList) {
     fixtureRefresh.disabled = true;
   });
 }
+
+const renderCart = () => {
+  if (!cartItems || !cartMail) return;
+
+  if (!cart.length) {
+    cartItems.innerHTML = "<p>اختر قميصاً ومقاساً لإعداد طلب مبدئي.</p>";
+    cartMail.href = "mailto:info@example.com?subject=Al-Salt%20SC%20Jersey%20Order";
+    return;
+  }
+
+  cartItems.innerHTML = cart
+    .map(
+      (item, index) => `
+        <div class="cart-item">
+          <strong>${index + 1}. ${item.product}</strong>
+          <span>المقاس: ${item.size}</span>
+        </div>
+      `,
+    )
+    .join("");
+
+  const orderLines = cart.map((item, index) => `${index + 1}. ${item.product} - Size ${item.size}`).join("%0A");
+  cartMail.href = `mailto:info@example.com?subject=Al-Salt%20SC%20Jersey%20Order&body=Hello,%0AI would like to request:%0A${orderLines}%0A%0AName:%0APhone:%0ACity:`;
+};
+
+if (productCards.length) {
+  productCards.forEach((card) => {
+    const button = card.querySelector("[data-add-product]");
+    const size = card.querySelector("[data-size]");
+
+    button?.addEventListener("click", () => {
+      cart.push({
+        product: card.dataset.product || "Jersey",
+        size: size?.value || "L",
+      });
+      renderCart();
+    });
+  });
+}
+
+clearCart?.addEventListener("click", () => {
+  cart.length = 0;
+  renderCart();
+});
+
+renderCart();
