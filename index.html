@@ -9,10 +9,10 @@
       content="موقع تعريفي احترافي لنادي السلط الرياضي، يعرض معلومات النادي، التاريخ، الإنجازات، الأخبار، وروابط التواصل."
     />
     <link rel="icon" href="assets/al-salt-logo-transparent.png" type="image/png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2" />
   </head>
   <body>
-    <header class="topbar">
+    <header class="topbar" data-header>
       <a class="brand" href="#home" aria-label="نادي السلط الرياضي">
         <img src="assets/al-salt-logo-transparent.png" alt="شعار نادي السلط الرياضي" />
         <span>
@@ -29,6 +29,7 @@
         <a href="#about">النادي</a>
         <a href="#history">التاريخ</a>
         <a href="#honours">الإنجازات</a>
+        <a href="#squad">الفريق الأول</a>
         <a href="#matchday">المباريات</a>
         <a href="#media">المركز الإعلامي</a>
         <a class="nav-cta" href="#contact">تواصل معنا</a>
@@ -43,7 +44,8 @@
           <span class="hero-badge">الرهيب</span>
           <p class="hero-lede">
             نادي السلط الرياضي يمثل مدينة السلط في كرة القدم الأردنية، بجمهور محلي واضح
-            وحضور متصاعد في المنافسات المحلية والآسيوية.
+            وحضور متصاعد في المنافسات المحلية والآسيوية، مع واجهة حديثة تعرض الفريق،
+            النتائج، والمباريات بطريقة تليق بالنادي.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#about">تعرف على النادي</a>
@@ -86,8 +88,8 @@
           <strong>الرهيب</strong>
         </article>
         <article>
-          <span>آخر إنجاز بارز</span>
-          <strong>درع الاتحاد 2024-25</strong>
+          <span>آخر نتيجة منشورة</span>
+          <strong>السلط 0 - 0 الوحدات</strong>
         </article>
       </section>
 
@@ -105,8 +107,8 @@
           <span>مشاركة في كأس الاتحاد الآسيوي</span>
         </article>
         <article>
-          <strong>2024-25</strong>
-          <span>بطل درع الاتحاد الأردني</span>
+          <strong>28</strong>
+          <span>حجم القائمة حسب Transfermarkt</span>
         </article>
       </section>
 
@@ -191,28 +193,180 @@
         </div>
       </section>
 
-      <section class="section matchday" id="matchday">
-        <div>
-          <p class="eyebrow">المباريات</p>
-          <h2>قسم ثابت للنتائج والمواعيد الرسمية.</h2>
+      <section class="section squad" id="squad">
+        <div class="section-heading">
+          <p class="eyebrow">الفريق الأول</p>
+          <h2>قائمة لاعبين قابلة للبحث والتصفية.</h2>
           <p>
-            الموقع الرسمي يجب أن يعرض فقط المعلومات المؤكدة: موعد المباراة، المنافس،
-            البطولة، الملعب، النتيجة، وتقرير مختصر بعد النهاية.
+            هذه القائمة مبنية على بيانات عامة منشورة لموسمي 2025-26 و2026-27.
+            قبل اعتماد الموقع رسمياً، يجب مطابقة الأسماء والأرقام مع كشوفات النادي والاتحاد.
           </p>
         </div>
-        <div class="matchday-list">
-          <article>
-            <strong>جدول المباريات</strong>
-            <span>المواعيد الرسمية بعد اعتمادها من الاتحاد الأردني.</span>
+
+        <div class="squad-toolbar" aria-label="أدوات تصفية قائمة اللاعبين">
+          <label>
+            <span>ابحث عن لاعب</span>
+            <input type="search" data-player-search placeholder="اكتب الاسم..." />
+          </label>
+          <div class="filter-buttons" role="group" aria-label="تصفية حسب المركز">
+            <button class="is-active" type="button" data-filter="all">الكل</button>
+            <button type="button" data-filter="goalkeeper">حراس المرمى</button>
+            <button type="button" data-filter="defender">الدفاع</button>
+            <button type="button" data-filter="midfielder">الوسط</button>
+            <button type="button" data-filter="forward">الهجوم</button>
+          </div>
+        </div>
+
+        <div class="squad-grid" data-squad-grid>
+          <article class="player-card" data-position="goalkeeper" data-name="saif abu hazeem سيف أبو هزيم">
+            <span class="shirt">22</span>
+            <h3>Saif Abu Hazeem</h3>
+            <p>حارس مرمى · الأردن</p>
           </article>
-          <article>
-            <strong>النتائج</strong>
-            <span>نتيجة المباراة، الهدافون، والبطولة.</span>
+          <article class="player-card" data-position="goalkeeper" data-name="anas al khalaileh أنس الخلايلة">
+            <span class="shirt">GK</span>
+            <h3>Anas Al-Khalaileh</h3>
+            <p>حارس مرمى · الأردن</p>
           </article>
-          <article>
-            <strong>تذاكر وتنظيم</strong>
-            <span>معلومات الحضور، البوابات، والتعليمات الجماهيرية عند توفرها.</span>
+          <article class="player-card" data-position="goalkeeper" data-name="moataz yaseen معتز ياسين">
+            <span class="shirt">GK</span>
+            <h3>Moataz Yaseen</h3>
+            <p>حارس مرمى · الأردن</p>
           </article>
+          <article class="player-card" data-position="defender" data-name="rawad abu khizaran رواد أبو خيزران">
+            <span class="shirt">CB</span>
+            <h3>Rawad Abu Khizaran</h3>
+            <p>مدافع · الأردن</p>
+          </article>
+          <article class="player-card" data-position="defender" data-name="abdallah almanasrah عبدالله المناصرة">
+            <span class="shirt">DF</span>
+            <h3>Abdallah Almanasrah</h3>
+            <p>مدافع · الأردن</p>
+          </article>
+          <article class="player-card" data-position="defender" data-name="khalid al awaqleh خالد أبو عاقولة">
+            <span class="shirt">DF</span>
+            <h3>Khalid Al-Awaqleh</h3>
+            <p>مدافع · الأردن</p>
+          </article>
+          <article class="player-card" data-position="defender" data-name="mohammad ali محمد علي">
+            <span class="shirt">CB</span>
+            <h3>Mohammad Ali</h3>
+            <p>مدافع · الأردن</p>
+          </article>
+          <article class="player-card" data-position="midfielder" data-name="mohammad alrazem محمد الرزم">
+            <span class="shirt">23</span>
+            <h3>Mohammad Al-Razem</h3>
+            <p>وسط · الأردن</p>
+          </article>
+          <article class="player-card" data-position="midfielder" data-name="ghaith al mhairat غيث مهيرات">
+            <span class="shirt">19</span>
+            <h3>Ghaith Al-Mhairat</h3>
+            <p>وسط · الأردن</p>
+          </article>
+          <article class="player-card" data-position="midfielder" data-name="ameed sawafta عميد صوافطة">
+            <span class="shirt">CM</span>
+            <h3>Ameed Sawafta</h3>
+            <p>وسط · فلسطين</p>
+          </article>
+          <article class="player-card" data-position="midfielder" data-name="hamad al balawneh حمد البلوينة">
+            <span class="shirt">6</span>
+            <h3>Hamad Al-Balawneh</h3>
+            <p>وسط · الأردن</p>
+          </article>
+          <article class="player-card" data-position="midfielder" data-name="khader al haj خضر الحاج">
+            <span class="shirt">8</span>
+            <h3>Khader Al-Haj</h3>
+            <p>وسط · الأردن</p>
+          </article>
+          <article class="player-card" data-position="midfielder" data-name="ibrahim al ajarmeh ابراهيم العجارمة">
+            <span class="shirt">CM</span>
+            <h3>Ibrahim Al-Ajarmeh</h3>
+            <p>وسط · الأردن</p>
+          </article>
+          <article class="player-card" data-position="midfielder" data-name="zaid abu abed زيد أبو عابد">
+            <span class="shirt">LS</span>
+            <h3>Zaid Abu-Abed</h3>
+            <p>وسط · الأردن</p>
+          </article>
+          <article class="player-card" data-position="forward" data-name="mohammad masheh محمد مشة">
+            <span class="shirt">FW</span>
+            <h3>Mohammad Masheh</h3>
+            <p>مهاجم · الأردن</p>
+          </article>
+          <article class="player-card" data-position="forward" data-name="abdallah deeb عبدالله ديب">
+            <span class="shirt">LW</span>
+            <h3>Abdallah Deeb</h3>
+            <p>جناح · الأردن</p>
+          </article>
+          <article class="player-card" data-position="forward" data-name="suhaib abu hashhash صهيب أبو حشاش">
+            <span class="shirt">10</span>
+            <h3>Suhaib Abu Hashhash</h3>
+            <p>جناح · الأردن</p>
+          </article>
+          <article class="player-card" data-position="forward" data-name="cheikhna semega شيخنا سيميغا">
+            <span class="shirt">CF</span>
+            <h3>Cheikhna Semega</h3>
+            <p>مهاجم · موريتانيا</p>
+          </article>
+          <article class="player-card" data-position="forward" data-name="kalu onyemaechi كالو">
+            <span class="shirt">9</span>
+            <h3>Kalu Onyemaechi</h3>
+            <p>مهاجم · نيجيريا</p>
+          </article>
+          <article class="player-card" data-position="forward" data-name="khaled al dardour خالد الدردور">
+            <span class="shirt">CF</span>
+            <h3>Khaled Al-Dardour</h3>
+            <p>مهاجم · الأردن</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section matchday" id="matchday">
+        <div class="matchday-copy">
+          <p class="eyebrow">المباريات</p>
+          <h2>مركز مباريات يعطي الموقع طابعاً رسمياً.</h2>
+          <p>
+            يعرض هذا القسم آخر نتيجة مؤكدة، وجدولاً قابلاً للتحديث عند صدور
+            المواعيد الرسمية. عندما لا تكون المباراة القادمة منشورة بوضوح، يظهر
+            ذلك بصيغة مهنية بدلاً من إدخال موعد غير مؤكد.
+          </p>
+        </div>
+        <div class="fixture-board">
+          <article class="featured-fixture">
+            <span class="status">آخر نتيجة</span>
+            <div class="scoreline">
+              <strong>السلط</strong>
+              <b>0 - 0</b>
+              <strong>الوحدات</strong>
+            </div>
+            <p>الدوري الأردني للمحترفين · الجولة الثانية · 12 أيلول 2026 · ستاد عمان الدولي</p>
+          </article>
+          <article class="next-fixture">
+            <span class="status upcoming">المباراة القادمة</span>
+            <h3>بانتظار التثبيت الرسمي</h3>
+            <p>
+              لا يظهر حالياً موعد قادم مؤكد من مصدر عام ثابت. عند صدور جدول الجولة
+              التالية، يمكن تحديث الخصم، التاريخ، التوقيت، والملعب هنا.
+            </p>
+            <button class="button primary" type="button" data-fixture-refresh>تحديث حالة الجدول</button>
+          </article>
+          <div class="fixture-list" data-fixture-list aria-live="polite">
+            <article>
+              <span>17 أيلول 2026</span>
+              <strong>دوقرة 2 - 0 السلط</strong>
+              <small>الدوري الأردني للمحترفين · الجولة الثالثة</small>
+            </article>
+            <article>
+              <span>12 أيلول 2026</span>
+              <strong>السلط 0 - 0 الوحدات</strong>
+              <small>الدوري الأردني للمحترفين · الجولة الثانية</small>
+            </article>
+            <article>
+              <span>موسم 2026-27</span>
+              <strong>جدول المباريات القادمة</strong>
+              <small>يُحدّث بعد النشر الرسمي من الاتحاد أو منصة النتائج المعتمدة.</small>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -228,7 +382,7 @@
           </article>
           <article>
             <h3>الفريق الأول</h3>
-            <p>قائمة اللاعبين والجهاز الفني بعد اعتمادها من النادي.</p>
+            <p>قائمة لاعبين بتصفية حسب المركز، مع قابلية إضافة الصور والأرقام الرسمية.</p>
           </article>
           <article>
             <h3>أكاديمية النادي</h3>
@@ -255,7 +409,9 @@
           <h2>المعلومات المستخدمة في هذه النسخة.</h2>
         </div>
         <ul>
-          <li>تم الاعتماد على معلومات عامة من Transfermarkt وSoccerway وAFC ومراجع كرة القدم العامة.</li>
+          <li>تم الاعتماد على معلومات عامة من Transfermarkt لقائمة الفريق، حجم القائمة، متوسط العمر، والقيمة السوقية.</li>
+          <li>تمت مراجعة مصادر نتائج عامة مثل Petra وYalla Shoot و365Scores للأخبار والنتائج القريبة.</li>
+          <li>قائمة اللاعبين والمباريات قابلة للتغير، ويجب اعتمادها نهائياً من النادي أو الاتحاد الأردني قبل النشر الرسمي.</li>
           <li>أي نشر رسمي يجب أن يراجع الأسماء، الشعارات، الجداول، والرعاة مع إدارة نادي السلط.</li>
           <li>تم استخدام شعار متاح للعامة لأغراض العرض، ويجب الحصول على موافقة النادي قبل النشر الرسمي.</li>
         </ul>
@@ -286,6 +442,6 @@
       <a href="#home">العودة للأعلى</a>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
   </body>
 </html>
