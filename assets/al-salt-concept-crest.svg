@@ -1,0 +1,12 @@
+<svg width="220" height="260" viewBox="0 0 220 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Al-Salt SC concept crest</title>
+  <desc id="desc">A volunteer concept crest using mountain lines, a football, and AS initials.</desc>
+  <path d="M110 10L198 44V111C198 174 161 224 110 246C59 224 22 174 22 111V44L110 10Z" fill="#0A1A2F"/>
+  <path d="M110 22L186 51V111C186 166 154 210 110 230C66 210 34 166 34 111V51L110 22Z" stroke="#D7A935" stroke-width="6"/>
+  <path d="M50 141L80 104L103 129L129 87L171 141" stroke="#D7A935" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="110" cy="157" r="26" fill="#F4F7FB" stroke="#D7A935" stroke-width="5"/>
+  <path d="M110 132L121 142L117 157H103L99 142L110 132Z" fill="#0A1A2F"/>
+  <path d="M85 153L99 142M135 153L121 142M93 176L103 157M127 176L117 157" stroke="#0A1A2F" stroke-width="4" stroke-linecap="round"/>
+  <text x="110" y="77" text-anchor="middle" fill="#F4F7FB" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="42">AS</text>
+  <text x="110" y="207" text-anchor="middle" fill="#F4F7FB" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="18">1965</text>
+</svg>
